@@ -70,14 +70,22 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  const [initializeRenderer, setInitializeRenderer] = useState(false);
   useEffect(() => {
-    if (!canvasRef.current) return
+    // Delay initialization to ensure canvasRef is set
+    const timeout = setTimeout(() => setInitializeRenderer(true), 10);
+    return () => clearTimeout(timeout);
+  }, []);
 
-    const disposed = false
+  useEffect(() => {
+    if (!initializeRenderer || !canvasRef.current) return
+
+    let disposed = false
     let packBlob: Blob | null = null
     const canvasElement = canvasRef.current
 
     const initialiseRenderer = async () => {
+      console.log('Initializing SchematicRenderer...')
       setStatus((current) => (current === 'error' ? current : 'initializing'))
       setMessage((current) => current || 'Preparing renderer...')
 
@@ -102,7 +110,7 @@ export default function App() {
           },
           {
             singleSchematicMode: true,
-            enableDragAndDrop: false,
+            enableDragAndDrop: true,
             enableAutoOrbit: false,
             autoOrbitDuration: 28,
             enableProgressBar: true,
@@ -165,13 +173,13 @@ export default function App() {
     initialiseRenderer()
 
     return () => {
-      // disposed = true
-      // rendererRef.current?.dispose?.()
-      // rendererRef.current = null
-      // setRendererReady(false)
-      // console.log('Renderer disposed')
+      disposed = true
+      rendererRef.current?.dispose?.()
+      rendererRef.current = null
+      setRendererReady(false)
+      console.log('Renderer disposed')
     }
-  }, [])
+  }, [initializeRenderer])
 
   useEffect(() => {
     if (!rendererReady || !schematicUrl || urlErrorRef.current) {
@@ -233,7 +241,6 @@ export default function App() {
         )
 
         if (cancelled) return
-
         setSchematicName(readableName)
         setStatus('ready')
         setMessage('')
