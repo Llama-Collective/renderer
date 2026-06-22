@@ -225,6 +225,9 @@ export class SchematicViewer {
    *  back to a block model — wrong for "generated" items (a popped lever showing a 3D block, not its icon).
    *  Set before the resource pack loads; the pack-load rebuild picks it up. */
   itemIds: readonly string[] | undefined = undefined;
+  /** Ground-reference floor grid at y=0 (default ON). Set false before a scene build, or call
+   *  {@link setGridVisible} to toggle it live; the choice persists across scene rebuilds. */
+  showGrid = true;
 
   // ── Device / loop ────────────────────────────────────────────────────────────
   private readonly canvas: HTMLCanvasElement;
@@ -584,7 +587,7 @@ export class SchematicViewer {
       return;
     }
     const overlay = new OverlayRenderer(device, device.colorFormat, device.depthFormat);
-    overlay.setGrid(model.bounds()); // ground-reference floor grid centered on the build (null → origin default)
+    if (this.showGrid) overlay.setGrid(model.bounds()); // ground-reference floor grid centered on the build (skipped when hidden)
     const explosions = new ExplosionEffects(device, device.colorFormat, device.depthFormat);
 
     // Re-ingest the CURRENT entity + block-entity state into the new world (preserves live sim state).
@@ -775,6 +778,17 @@ export class SchematicViewer {
     this.lightLutParams = { ...this.lightLutParams, ...params };
     this.scene?.renderer.setLightLut(buildLightLut(this.lightLutParams));
     this.invalidate(); // render-on-demand: the LUT changed the look without any remesh — redraw once.
+  }
+
+  /** Show/hide the ground-reference floor grid. Applies immediately to the live scene and persists across
+   *  rebuilds (buildScene reads `showGrid`). */
+  setGridVisible(visible: boolean): void {
+    this.showGrid = visible;
+    if (this.overlay) {
+      if (visible) this.overlay.setGrid(this.model?.bounds() ?? null);
+      else this.overlay.clearGrid();
+    }
+    this.invalidate();
   }
 
   /** Set a single block (editor convenience; sim edits flow through applySimulationDiff). */

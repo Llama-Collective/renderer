@@ -136,6 +136,7 @@ async function main(): Promise<void> {
   if (schematicUrl) initParser();
 
   const viewer = new SchematicViewer(canvas);
+  viewer.showGrid = false; // no ground-reference floor grid in the standalone viewer
 
   // Surface a fatal "no GPU backend" instead of a silent black canvas (W7).
   viewer.onDeviceError = (message) => {

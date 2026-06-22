@@ -158,6 +158,12 @@ export class OverlayRenderer {
     }
   }
 
+  /** Hide the ground grid — drop all floor lines so nothing is drawn (the inverse of {@link setGrid}). */
+  clearGrid(): void {
+    this.gridLines = [];
+    this.dirty = true;
+  }
+
   // ── Geometry generators (ported from EditableWorldRenderer) ──────────────────
 
   private faceFrame(pick: PickResult): { center: Vec3; rv: Vec3; uv: Vec3 } {
