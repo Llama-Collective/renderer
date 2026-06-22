@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Schematic Renderer</title>
+    <script type="module" crossorigin src="./assets/index-3Z-iIWxw.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Czy8_Vnd.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <canvas id="renderer-canvas" class="renderer-canvas"></canvas>
+
+      <div class="status-bar">
+        <span id="status-dot" class="status-dot status-initializing"></span>
+        <div class="status-text">
+          <div id="status-label" class="status-label">Initializing renderer</div>
+          <div id="status-subtext" class="status-subtext">Preparing renderer…</div>
+          <div id="progress" class="progress" hidden>
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="helper-card" class="helper-card" hidden>
+        <h2>Send me a schematic</h2>
+        <p>Append <code>?url=</code> to this page to load a <code>.schem</code> or <code>.litematic</code> file.</p>
+        <code class="example-url">?url=https://example.com/build.schem</code>
+      </div>
+
+      <div id="error-card" class="helper-card error" hidden>
+        <h2>Something went wrong</h2>
+        <p id="error-message"></p>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1782,11 +1782,12 @@ export class SchematicViewer {
   }
 
   private readonly onPointerDown = (e: PointerEvent): void => {
-    // Orbit on middle / alt / shift drag (leave plain left-drag for the app's edit/pick handlers).
-    if (e.button === 1 || e.altKey || e.shiftKey) {
+    // Left- or middle-button drag orbits the camera — no modifier key (shift/alt) required.
+    if (e.button === 0 || e.button === 1) {
       this.dragging = true;
       this.lastX = e.clientX;
       this.lastY = e.clientY;
+      e.preventDefault(); // suppress text selection / native drag while orbiting
     }
   };
   private readonly onPointerUp = (): void => {
