@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebGPU off-thread meshing smoke (Phase 5)</title>
+    <style>
+      :root { color-scheme: dark; }
+      html, body { margin: 0; height: 100%; overflow: hidden; }
+      body { background: #15171c; color: #e6e6e6; font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+      #c { position: fixed; inset: 0; width: 100%; height: 100%; display: block; background: #000; }
+      #hud {
+        position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+        display: flex; align-items: center; gap: 10px; padding: 6px 12px; border-radius: 8px;
+        background: rgba(20, 22, 28, 0.72); backdrop-filter: blur(6px); pointer-events: none; white-space: nowrap;
+      }
+      #hud h1 { font-size: 12px; font-weight: 600; margin: 0; opacity: 0.6; }
+      #status { padding: 2px 8px; border-radius: 5px; }
+      #status.run { background: #2b2f3a; }
+      #status.pass { background: #143a1e; color: #9ff0b5; }
+      #status.fail { background: #3a1414; color: #ff9b9b; }
+    </style>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <div id="hud">
+      <h1>schematic-renderer-webgpu · off-thread meshing smoke (Phase 5)</h1>
+      <div id="status" class="run">loading…</div>
+    </div>
+    <script type="module" src="./dist/workers.js"></script>
+  </body>
+</html>

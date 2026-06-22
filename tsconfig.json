@@ -1,7 +1,29 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": ["@webgpu/types"],
+    "useDefineForClassFields": true,
+
+    /* Bundler mode (mirrors ../schematic-renderer/tsconfig.json) */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+
+    /* Linting */
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Relaxed during the scaffold phase because stub signatures intentionally
+       declare parameters they do not use yet. RE-ENABLE both before Phase 1
+       implementation (see RENDERER_PLAN.md §23 Maintainability). */
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "comment:harness": "Browser harness files are type-checked here (DOM + @webgpu/types). The node tooling scripts (harness/serve.ts, harness/verify.ts) are intentionally excluded — they run via root `tsx` with @types/node + esbuild/playwright types this package does not load.",
+  "include": ["src", "harness/smoke.ts", "harness/main.ts", "harness/webgl2smoke.ts", "harness/webgl2.ts", "harness/crossbackend.ts", "harness/scene.ts", "harness/demo.ts", "harness/glass.ts", "harness/fluid.ts", "harness/stress.ts", "harness/piston.ts", "harness/integration.ts", "harness/simstorm.ts", "harness/farworld.ts"]
 }

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebGPU device smoke test</title>
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: #15171c;
+        color: #e6e6e6;
+        font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+      h1 { font-size: 15px; font-weight: 600; margin: 0; opacity: 0.7; }
+      canvas {
+        width: 256px;
+        height: 256px;
+        image-rendering: pixelated;
+        border: 1px solid #333;
+        background: #000;
+      }
+      #status {
+        max-width: 640px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        text-align: center;
+      }
+      #status.run { background: #2b2f3a; }
+      #status.pass { background: #143a1e; color: #9ff0b5; }
+      #status.fail { background: #3a1414; color: #ff9b9b; }
+    </style>
+  </head>
+  <body>
+    <h1>schematic-renderer-webgpu · WebGPUDevice smoke test</h1>
+    <!-- 256×256 keeps readback bytesPerRow already 256-aligned and pixels easy to reason about. -->
+    <canvas id="c" width="256" height="256"></canvas>
+    <div id="status" class="run">loading…</div>
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>

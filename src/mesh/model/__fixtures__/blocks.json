@@ -1,0 +1,2248 @@
+{
+ "models": {
+  "block/oak_stairs_inner": {
+   "parent": "minecraft:block/inner_stairs",
+   "textures": {
+    "bottom": "minecraft:block/oak_planks",
+    "side": "minecraft:block/oak_planks",
+    "top": "minecraft:block/oak_planks"
+   }
+  },
+  "block/oak_stairs_outer": {
+   "parent": "minecraft:block/outer_stairs",
+   "textures": {
+    "bottom": "minecraft:block/oak_planks",
+    "side": "minecraft:block/oak_planks",
+    "top": "minecraft:block/oak_planks"
+   }
+  },
+  "block/oak_stairs": {
+   "parent": "minecraft:block/stairs",
+   "textures": {
+    "bottom": "minecraft:block/oak_planks",
+    "side": "minecraft:block/oak_planks",
+    "top": "minecraft:block/oak_planks"
+   }
+  },
+  "block/oak_fence_post": {
+   "parent": "minecraft:block/fence_post",
+   "textures": {
+    "texture": "minecraft:block/oak_planks"
+   }
+  },
+  "block/oak_fence_side": {
+   "parent": "minecraft:block/fence_side",
+   "textures": {
+    "texture": "minecraft:block/oak_planks"
+   }
+  },
+  "block/glass_pane_post": {
+   "parent": "minecraft:block/template_glass_pane_post",
+   "textures": {
+    "edge": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass_pane_top"
+    },
+    "pane": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass"
+    }
+   }
+  },
+  "block/glass_pane_side": {
+   "parent": "minecraft:block/template_glass_pane_side",
+   "textures": {
+    "edge": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass_pane_top"
+    },
+    "pane": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass"
+    }
+   }
+  },
+  "block/glass_pane_side_alt": {
+   "parent": "minecraft:block/template_glass_pane_side_alt",
+   "textures": {
+    "edge": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass_pane_top"
+    },
+    "pane": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass"
+    }
+   }
+  },
+  "block/glass_pane_noside": {
+   "parent": "minecraft:block/template_glass_pane_noside",
+   "textures": {
+    "pane": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass"
+    }
+   }
+  },
+  "block/glass_pane_noside_alt": {
+   "parent": "minecraft:block/template_glass_pane_noside_alt",
+   "textures": {
+    "pane": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass"
+    }
+   }
+  },
+  "block/grass_block": {
+   "parent": "block/block",
+   "textures": {
+    "particle": "block/dirt",
+    "bottom": "block/dirt",
+    "top": "block/grass_block_top",
+    "side": "block/grass_block_side",
+    "overlay": "block/grass_block_side_overlay"
+   },
+   "elements": [
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#bottom",
+       "cullface": "down"
+      },
+      "up": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#top",
+       "cullface": "up",
+       "tintindex": 0
+      },
+      "north": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "west"
+      },
+      "east": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "east"
+      }
+     }
+    },
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "north": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#overlay",
+       "tintindex": 0,
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#overlay",
+       "tintindex": 0,
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#overlay",
+       "tintindex": 0,
+       "cullface": "west"
+      },
+      "east": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#overlay",
+       "tintindex": 0,
+       "cullface": "east"
+      }
+     }
+    }
+   ]
+  },
+  "block/grass_block_snow": {
+   "parent": "minecraft:block/cube_bottom_top",
+   "textures": {
+    "bottom": "minecraft:block/dirt",
+    "particle": "minecraft:block/dirt",
+    "side": "minecraft:block/grass_block_snow",
+    "top": "minecraft:block/grass_block_top"
+   }
+  },
+  "block/oak_log_horizontal": {
+   "parent": "minecraft:block/cube_column_horizontal",
+   "textures": {
+    "end": "minecraft:block/oak_log_top",
+    "side": "minecraft:block/oak_log"
+   }
+  },
+  "block/oak_log": {
+   "parent": "minecraft:block/cube_column",
+   "textures": {
+    "end": "minecraft:block/oak_log_top",
+    "side": "minecraft:block/oak_log"
+   }
+  },
+  "block/oak_planks": {
+   "parent": "minecraft:block/cube_all",
+   "textures": {
+    "all": "minecraft:block/oak_planks"
+   }
+  },
+  "block/stone": {
+   "parent": "minecraft:block/cube_all",
+   "textures": {
+    "all": "minecraft:block/stone"
+   }
+  },
+  "block/stone_mirrored": {
+   "parent": "minecraft:block/cube_mirrored_all",
+   "textures": {
+    "all": "minecraft:block/stone"
+   }
+  },
+  "block/dirt": {
+   "parent": "minecraft:block/cube_all",
+   "textures": {
+    "all": "minecraft:block/dirt"
+   }
+  },
+  "block/cobblestone": {
+   "parent": "minecraft:block/cube_all",
+   "textures": {
+    "all": "minecraft:block/cobblestone"
+   }
+  },
+  "block/glass": {
+   "parent": "minecraft:block/cube_all",
+   "textures": {
+    "all": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/glass"
+    }
+   }
+  },
+  "block/leaves/oak/not_persistent": {
+   "parent": "minecraft:block/leaves",
+   "textures": {
+    "all": "minecraft:block/leaves/oak/not_persistent"
+   }
+  },
+  "block/leaves/oak/1": {
+   "parent": "minecraft:block/leaves",
+   "textures": {
+    "all": "minecraft:block/leaves/oak/1"
+   }
+  },
+  "block/leaves/oak/2": {
+   "parent": "minecraft:block/leaves",
+   "textures": {
+    "all": "minecraft:block/leaves/oak/2"
+   }
+  },
+  "block/leaves/oak/3": {
+   "parent": "minecraft:block/leaves",
+   "textures": {
+    "all": "minecraft:block/leaves/oak/3"
+   }
+  },
+  "block/leaves/oak/4": {
+   "parent": "minecraft:block/leaves",
+   "textures": {
+    "all": "minecraft:block/leaves/oak/4"
+   }
+  },
+  "block/leaves/oak/5": {
+   "parent": "minecraft:block/leaves",
+   "textures": {
+    "all": "minecraft:block/leaves/oak/5"
+   }
+  },
+  "block/leaves/oak/6": {
+   "parent": "minecraft:block/leaves",
+   "textures": {
+    "all": "minecraft:block/leaves/oak/6"
+   }
+  },
+  "block/leaves/oak/7": {
+   "parent": "minecraft:block/leaves",
+   "textures": {
+    "all": "minecraft:block/leaves/oak/7"
+   }
+  },
+  "block/white_stained_glass": {
+   "parent": "minecraft:block/cube_all",
+   "textures": {
+    "all": {
+     "force_translucent": true,
+     "sprite": "minecraft:block/white_stained_glass"
+    }
+   }
+  },
+  "block/inner_stairs": {
+   "textures": {
+    "particle": "#side"
+   },
+   "elements": [
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      8,
+      16
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#bottom",
+       "cullface": "down"
+      },
+      "up": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#top"
+      },
+      "north": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "west"
+      },
+      "east": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "east"
+      }
+     }
+    },
+    {
+     "from": [
+      8,
+      8,
+      0
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "up": {
+       "uv": [
+        8,
+        0,
+        16,
+        16
+       ],
+       "texture": "#top",
+       "cullface": "up"
+      },
+      "north": {
+       "uv": [
+        0,
+        0,
+        8,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        8,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        0,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side"
+      },
+      "east": {
+       "uv": [
+        0,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "east"
+      }
+     }
+    },
+    {
+     "from": [
+      0,
+      8,
+      8
+     ],
+     "to": [
+      8,
+      16,
+      16
+     ],
+     "faces": {
+      "up": {
+       "uv": [
+        0,
+        8,
+        8,
+        16
+       ],
+       "texture": "#top",
+       "cullface": "up"
+      },
+      "north": {
+       "uv": [
+        8,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side"
+      },
+      "south": {
+       "uv": [
+        0,
+        0,
+        8,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        8,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "west"
+      }
+     }
+    }
+   ]
+  },
+  "block/outer_stairs": {
+   "textures": {
+    "particle": "#side"
+   },
+   "elements": [
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      8,
+      16
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#bottom",
+       "cullface": "down"
+      },
+      "up": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#top"
+      },
+      "north": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "west"
+      },
+      "east": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "east"
+      }
+     }
+    },
+    {
+     "from": [
+      8,
+      8,
+      8
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "up": {
+       "uv": [
+        8,
+        8,
+        16,
+        16
+       ],
+       "texture": "#top",
+       "cullface": "up"
+      },
+      "north": {
+       "uv": [
+        0,
+        0,
+        8,
+        8
+       ],
+       "texture": "#side"
+      },
+      "south": {
+       "uv": [
+        8,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        8,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side"
+      },
+      "east": {
+       "uv": [
+        0,
+        0,
+        8,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "east"
+      }
+     }
+    }
+   ]
+  },
+  "block/stairs": {
+   "parent": "block/block",
+   "display": {
+    "gui": {
+     "rotation": [
+      30,
+      135,
+      0
+     ],
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "scale": [
+      0.625,
+      0.625,
+      0.625
+     ]
+    },
+    "head": {
+     "rotation": [
+      0,
+      -90,
+      0
+     ],
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "thirdperson_lefthand": {
+     "rotation": [
+      75,
+      -135,
+      0
+     ],
+     "translation": [
+      0,
+      2.5,
+      0
+     ],
+     "scale": [
+      0.375,
+      0.375,
+      0.375
+     ]
+    }
+   },
+   "textures": {
+    "particle": "#side"
+   },
+   "elements": [
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      8,
+      16
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#bottom",
+       "cullface": "down"
+      },
+      "up": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#top"
+      },
+      "north": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "west"
+      },
+      "east": {
+       "uv": [
+        0,
+        8,
+        16,
+        16
+       ],
+       "texture": "#side",
+       "cullface": "east"
+      }
+     }
+    },
+    {
+     "from": [
+      8,
+      8,
+      0
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "up": {
+       "uv": [
+        8,
+        0,
+        16,
+        16
+       ],
+       "texture": "#top",
+       "cullface": "up"
+      },
+      "north": {
+       "uv": [
+        0,
+        0,
+        8,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        8,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        0,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side"
+      },
+      "east": {
+       "uv": [
+        0,
+        0,
+        16,
+        8
+       ],
+       "texture": "#side",
+       "cullface": "east"
+      }
+     }
+    }
+   ]
+  },
+  "block/fence_post": {
+   "textures": {
+    "particle": "#texture"
+   },
+   "elements": [
+    {
+     "from": [
+      6,
+      0,
+      6
+     ],
+     "to": [
+      10,
+      16,
+      10
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        6,
+        6,
+        10,
+        10
+       ],
+       "texture": "#texture",
+       "cullface": "down"
+      },
+      "up": {
+       "uv": [
+        6,
+        6,
+        10,
+        10
+       ],
+       "texture": "#texture",
+       "cullface": "up"
+      },
+      "north": {
+       "uv": [
+        6,
+        0,
+        10,
+        16
+       ],
+       "texture": "#texture"
+      },
+      "south": {
+       "uv": [
+        6,
+        0,
+        10,
+        16
+       ],
+       "texture": "#texture"
+      },
+      "west": {
+       "uv": [
+        6,
+        0,
+        10,
+        16
+       ],
+       "texture": "#texture"
+      },
+      "east": {
+       "uv": [
+        6,
+        0,
+        10,
+        16
+       ],
+       "texture": "#texture"
+      }
+     },
+     "__comment": "Center post"
+    }
+   ]
+  },
+  "block/fence_side": {
+   "textures": {
+    "particle": "#texture"
+   },
+   "elements": [
+    {
+     "from": [
+      7,
+      12,
+      0
+     ],
+     "to": [
+      9,
+      15,
+      9
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        7,
+        0,
+        9,
+        9
+       ],
+       "texture": "#texture"
+      },
+      "up": {
+       "uv": [
+        7,
+        0,
+        9,
+        9
+       ],
+       "texture": "#texture"
+      },
+      "north": {
+       "uv": [
+        7,
+        1,
+        9,
+        4
+       ],
+       "texture": "#texture",
+       "cullface": "north"
+      },
+      "west": {
+       "uv": [
+        0,
+        1,
+        9,
+        4
+       ],
+       "texture": "#texture"
+      },
+      "east": {
+       "uv": [
+        0,
+        1,
+        9,
+        4
+       ],
+       "texture": "#texture"
+      }
+     },
+     "__comment": "top bar"
+    },
+    {
+     "from": [
+      7,
+      6,
+      0
+     ],
+     "to": [
+      9,
+      9,
+      9
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        7,
+        0,
+        9,
+        9
+       ],
+       "texture": "#texture"
+      },
+      "up": {
+       "uv": [
+        7,
+        0,
+        9,
+        9
+       ],
+       "texture": "#texture"
+      },
+      "north": {
+       "uv": [
+        7,
+        7,
+        9,
+        10
+       ],
+       "texture": "#texture",
+       "cullface": "north"
+      },
+      "west": {
+       "uv": [
+        0,
+        7,
+        9,
+        10
+       ],
+       "texture": "#texture"
+      },
+      "east": {
+       "uv": [
+        0,
+        7,
+        9,
+        10
+       ],
+       "texture": "#texture"
+      }
+     },
+     "__comment": "lower bar"
+    }
+   ]
+  },
+  "block/template_glass_pane_post": {
+   "ambientocclusion": false,
+   "textures": {
+    "particle": "#pane"
+   },
+   "elements": [
+    {
+     "from": [
+      7,
+      0,
+      7
+     ],
+     "to": [
+      9,
+      16,
+      9
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        7,
+        7,
+        9,
+        9
+       ],
+       "texture": "#edge"
+      },
+      "up": {
+       "uv": [
+        7,
+        7,
+        9,
+        9
+       ],
+       "texture": "#edge"
+      }
+     }
+    }
+   ]
+  },
+  "block/template_glass_pane_side": {
+   "ambientocclusion": false,
+   "textures": {
+    "particle": "#pane"
+   },
+   "elements": [
+    {
+     "from": [
+      7,
+      0,
+      0
+     ],
+     "to": [
+      9,
+      16,
+      7
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        7,
+        0,
+        9,
+        7
+       ],
+       "texture": "#edge"
+      },
+      "up": {
+       "uv": [
+        7,
+        0,
+        9,
+        7
+       ],
+       "texture": "#edge"
+      },
+      "north": {
+       "uv": [
+        7,
+        0,
+        9,
+        16
+       ],
+       "texture": "#edge",
+       "cullface": "north"
+      },
+      "west": {
+       "uv": [
+        16,
+        0,
+        9,
+        16
+       ],
+       "texture": "#pane"
+      },
+      "east": {
+       "uv": [
+        9,
+        0,
+        16,
+        16
+       ],
+       "texture": "#pane"
+      }
+     }
+    }
+   ]
+  },
+  "block/template_glass_pane_side_alt": {
+   "ambientocclusion": false,
+   "textures": {
+    "particle": "#pane"
+   },
+   "elements": [
+    {
+     "from": [
+      7,
+      0,
+      9
+     ],
+     "to": [
+      9,
+      16,
+      16
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        7,
+        0,
+        9,
+        7
+       ],
+       "texture": "#edge"
+      },
+      "up": {
+       "uv": [
+        7,
+        0,
+        9,
+        7
+       ],
+       "texture": "#edge"
+      },
+      "south": {
+       "uv": [
+        7,
+        0,
+        9,
+        16
+       ],
+       "texture": "#edge",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        7,
+        0,
+        0,
+        16
+       ],
+       "texture": "#pane"
+      },
+      "east": {
+       "uv": [
+        0,
+        0,
+        7,
+        16
+       ],
+       "texture": "#pane"
+      }
+     }
+    }
+   ]
+  },
+  "block/template_glass_pane_noside": {
+   "ambientocclusion": false,
+   "textures": {
+    "particle": "#pane"
+   },
+   "elements": [
+    {
+     "from": [
+      7,
+      0,
+      7
+     ],
+     "to": [
+      9,
+      16,
+      9
+     ],
+     "faces": {
+      "north": {
+       "uv": [
+        9,
+        0,
+        7,
+        16
+       ],
+       "texture": "#pane"
+      }
+     }
+    }
+   ]
+  },
+  "block/template_glass_pane_noside_alt": {
+   "ambientocclusion": false,
+   "textures": {
+    "particle": "#pane"
+   },
+   "elements": [
+    {
+     "from": [
+      7,
+      0,
+      7
+     ],
+     "to": [
+      9,
+      16,
+      9
+     ],
+     "faces": {
+      "east": {
+       "uv": [
+        7,
+        0,
+        9,
+        16
+       ],
+       "texture": "#pane"
+      }
+     }
+    }
+   ]
+  },
+  "block/block": {
+   "gui_light": "side",
+   "display": {
+    "gui": {
+     "rotation": [
+      30,
+      225,
+      0
+     ],
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "scale": [
+      0.625,
+      0.625,
+      0.625
+     ]
+    },
+    "ground": {
+     "rotation": [
+      0,
+      0,
+      0
+     ],
+     "translation": [
+      0,
+      3,
+      0
+     ],
+     "scale": [
+      0.25,
+      0.25,
+      0.25
+     ]
+    },
+    "fixed": {
+     "rotation": [
+      0,
+      0,
+      0
+     ],
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "scale": [
+      0.5,
+      0.5,
+      0.5
+     ]
+    },
+    "on_shelf": {
+     "rotation": [
+      0,
+      180,
+      0
+     ],
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ]
+    },
+    "thirdperson_righthand": {
+     "rotation": [
+      75,
+      45,
+      0
+     ],
+     "translation": [
+      0,
+      2.5,
+      0
+     ],
+     "scale": [
+      0.375,
+      0.375,
+      0.375
+     ]
+    },
+    "firstperson_righthand": {
+     "rotation": [
+      0,
+      45,
+      0
+     ],
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "scale": [
+      0.4,
+      0.4,
+      0.4
+     ]
+    },
+    "firstperson_lefthand": {
+     "rotation": [
+      0,
+      225,
+      0
+     ],
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "scale": [
+      0.4,
+      0.4,
+      0.4
+     ]
+    }
+   }
+  },
+  "block/cube_bottom_top": {
+   "parent": "block/cube",
+   "textures": {
+    "particle": "#side",
+    "down": "#bottom",
+    "up": "#top",
+    "north": "#side",
+    "east": "#side",
+    "south": "#side",
+    "west": "#side"
+   }
+  },
+  "block/cube_column_horizontal": {
+   "parent": "block/block",
+   "elements": [
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "down": {
+       "texture": "#down",
+       "cullface": "down"
+      },
+      "up": {
+       "texture": "#up",
+       "rotation": 180,
+       "cullface": "up"
+      },
+      "north": {
+       "texture": "#north",
+       "cullface": "north"
+      },
+      "south": {
+       "texture": "#south",
+       "cullface": "south"
+      },
+      "west": {
+       "texture": "#west",
+       "cullface": "west"
+      },
+      "east": {
+       "texture": "#east",
+       "cullface": "east"
+      }
+     }
+    }
+   ],
+   "textures": {
+    "particle": "#side",
+    "down": "#end",
+    "up": "#end",
+    "north": "#side",
+    "east": "#side",
+    "south": "#side",
+    "west": "#side"
+   }
+  },
+  "block/cube_column": {
+   "parent": "block/cube",
+   "textures": {
+    "particle": "#side",
+    "down": "#end",
+    "up": "#end",
+    "north": "#side",
+    "east": "#side",
+    "south": "#side",
+    "west": "#side"
+   }
+  },
+  "block/cube_all": {
+   "parent": "block/cube",
+   "textures": {
+    "particle": "#all",
+    "down": "#all",
+    "up": "#all",
+    "north": "#all",
+    "east": "#all",
+    "south": "#all",
+    "west": "#all"
+   }
+  },
+  "block/cube_mirrored_all": {
+   "parent": "block/cube_mirrored",
+   "textures": {
+    "particle": "#all",
+    "down": "#all",
+    "up": "#all",
+    "north": "#all",
+    "east": "#all",
+    "south": "#all",
+    "west": "#all"
+   }
+  },
+  "block/leaves": {
+   "parent": "block/block",
+   "textures": {
+    "particle": "#all"
+   },
+   "elements": [
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#all",
+       "tintindex": 0,
+       "cullface": "down"
+      },
+      "up": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#all",
+       "tintindex": 0,
+       "cullface": "up"
+      },
+      "north": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#all",
+       "tintindex": 0,
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#all",
+       "tintindex": 0,
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#all",
+       "tintindex": 0,
+       "cullface": "west"
+      },
+      "east": {
+       "uv": [
+        0,
+        0,
+        16,
+        16
+       ],
+       "texture": "#all",
+       "tintindex": 0,
+       "cullface": "east"
+      }
+     }
+    }
+   ]
+  },
+  "block/cube": {
+   "parent": "block/block",
+   "elements": [
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "down": {
+       "texture": "#down",
+       "cullface": "down"
+      },
+      "up": {
+       "texture": "#up",
+       "cullface": "up"
+      },
+      "north": {
+       "texture": "#north",
+       "cullface": "north"
+      },
+      "south": {
+       "texture": "#south",
+       "cullface": "south"
+      },
+      "west": {
+       "texture": "#west",
+       "cullface": "west"
+      },
+      "east": {
+       "texture": "#east",
+       "cullface": "east"
+      }
+     }
+    }
+   ]
+  },
+  "block/cube_mirrored": {
+   "elements": [
+    {
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "to": [
+      16,
+      16,
+      16
+     ],
+     "faces": {
+      "down": {
+       "uv": [
+        16,
+        0,
+        0,
+        16
+       ],
+       "texture": "#down",
+       "cullface": "down"
+      },
+      "up": {
+       "uv": [
+        16,
+        0,
+        0,
+        16
+       ],
+       "texture": "#up",
+       "cullface": "up"
+      },
+      "north": {
+       "uv": [
+        16,
+        0,
+        0,
+        16
+       ],
+       "texture": "#north",
+       "cullface": "north"
+      },
+      "south": {
+       "uv": [
+        16,
+        0,
+        0,
+        16
+       ],
+       "texture": "#south",
+       "cullface": "south"
+      },
+      "west": {
+       "uv": [
+        16,
+        0,
+        0,
+        16
+       ],
+       "texture": "#west",
+       "cullface": "west"
+      },
+      "east": {
+       "uv": [
+        16,
+        0,
+        0,
+        16
+       ],
+       "texture": "#east",
+       "cullface": "east"
+      }
+     }
+    }
+   ]
+  }
+ },
+ "blockstates": {
+  "oak_stairs": {
+   "variants": {
+    "facing=east,half=bottom,shape=inner_left": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "y": 270
+    },
+    "facing=east,half=bottom,shape=inner_right": {
+     "model": "minecraft:block/oak_stairs_inner"
+    },
+    "facing=east,half=bottom,shape=outer_left": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "y": 270
+    },
+    "facing=east,half=bottom,shape=outer_right": {
+     "model": "minecraft:block/oak_stairs_outer"
+    },
+    "facing=east,half=bottom,shape=straight": {
+     "model": "minecraft:block/oak_stairs"
+    },
+    "facing=east,half=top,shape=inner_left": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "x": 180
+    },
+    "facing=east,half=top,shape=inner_right": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "x": 180,
+     "y": 90
+    },
+    "facing=east,half=top,shape=outer_left": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "x": 180
+    },
+    "facing=east,half=top,shape=outer_right": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "x": 180,
+     "y": 90
+    },
+    "facing=east,half=top,shape=straight": {
+     "model": "minecraft:block/oak_stairs",
+     "uvlock": true,
+     "x": 180
+    },
+    "facing=north,half=bottom,shape=inner_left": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "y": 180
+    },
+    "facing=north,half=bottom,shape=inner_right": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "y": 270
+    },
+    "facing=north,half=bottom,shape=outer_left": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "y": 180
+    },
+    "facing=north,half=bottom,shape=outer_right": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "y": 270
+    },
+    "facing=north,half=bottom,shape=straight": {
+     "model": "minecraft:block/oak_stairs",
+     "uvlock": true,
+     "y": 270
+    },
+    "facing=north,half=top,shape=inner_left": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "x": 180,
+     "y": 270
+    },
+    "facing=north,half=top,shape=inner_right": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "x": 180
+    },
+    "facing=north,half=top,shape=outer_left": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "x": 180,
+     "y": 270
+    },
+    "facing=north,half=top,shape=outer_right": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "x": 180
+    },
+    "facing=north,half=top,shape=straight": {
+     "model": "minecraft:block/oak_stairs",
+     "uvlock": true,
+     "x": 180,
+     "y": 270
+    },
+    "facing=south,half=bottom,shape=inner_left": {
+     "model": "minecraft:block/oak_stairs_inner"
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "y": 90
+    },
+    "facing=south,half=bottom,shape=outer_left": {
+     "model": "minecraft:block/oak_stairs_outer"
+    },
+    "facing=south,half=bottom,shape=outer_right": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "y": 90
+    },
+    "facing=south,half=bottom,shape=straight": {
+     "model": "minecraft:block/oak_stairs",
+     "uvlock": true,
+     "y": 90
+    },
+    "facing=south,half=top,shape=inner_left": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "x": 180,
+     "y": 90
+    },
+    "facing=south,half=top,shape=inner_right": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "x": 180,
+     "y": 180
+    },
+    "facing=south,half=top,shape=outer_left": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "x": 180,
+     "y": 90
+    },
+    "facing=south,half=top,shape=outer_right": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "x": 180,
+     "y": 180
+    },
+    "facing=south,half=top,shape=straight": {
+     "model": "minecraft:block/oak_stairs",
+     "uvlock": true,
+     "x": 180,
+     "y": 90
+    },
+    "facing=west,half=bottom,shape=inner_left": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "y": 90
+    },
+    "facing=west,half=bottom,shape=inner_right": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "y": 180
+    },
+    "facing=west,half=bottom,shape=outer_left": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "y": 90
+    },
+    "facing=west,half=bottom,shape=outer_right": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "y": 180
+    },
+    "facing=west,half=bottom,shape=straight": {
+     "model": "minecraft:block/oak_stairs",
+     "uvlock": true,
+     "y": 180
+    },
+    "facing=west,half=top,shape=inner_left": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "x": 180,
+     "y": 180
+    },
+    "facing=west,half=top,shape=inner_right": {
+     "model": "minecraft:block/oak_stairs_inner",
+     "uvlock": true,
+     "x": 180,
+     "y": 270
+    },
+    "facing=west,half=top,shape=outer_left": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "x": 180,
+     "y": 180
+    },
+    "facing=west,half=top,shape=outer_right": {
+     "model": "minecraft:block/oak_stairs_outer",
+     "uvlock": true,
+     "x": 180,
+     "y": 270
+    },
+    "facing=west,half=top,shape=straight": {
+     "model": "minecraft:block/oak_stairs",
+     "uvlock": true,
+     "x": 180,
+     "y": 180
+    }
+   }
+  },
+  "oak_fence": {
+   "multipart": [
+    {
+     "apply": {
+      "model": "minecraft:block/oak_fence_post"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/oak_fence_side",
+      "uvlock": true
+     },
+     "when": {
+      "north": "true"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/oak_fence_side",
+      "uvlock": true,
+      "y": 90
+     },
+     "when": {
+      "east": "true"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/oak_fence_side",
+      "uvlock": true,
+      "y": 180
+     },
+     "when": {
+      "south": "true"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/oak_fence_side",
+      "uvlock": true,
+      "y": 270
+     },
+     "when": {
+      "west": "true"
+     }
+    }
+   ]
+  },
+  "glass_pane": {
+   "multipart": [
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_post"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_side"
+     },
+     "when": {
+      "north": "true"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_side",
+      "y": 90
+     },
+     "when": {
+      "east": "true"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_side_alt"
+     },
+     "when": {
+      "south": "true"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_side_alt",
+      "y": 90
+     },
+     "when": {
+      "west": "true"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_noside"
+     },
+     "when": {
+      "north": "false"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_noside_alt"
+     },
+     "when": {
+      "east": "false"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_noside_alt",
+      "y": 90
+     },
+     "when": {
+      "south": "false"
+     }
+    },
+    {
+     "apply": {
+      "model": "minecraft:block/glass_pane_noside",
+      "y": 270
+     },
+     "when": {
+      "west": "false"
+     }
+    }
+   ]
+  },
+  "grass_block": {
+   "variants": {
+    "snowy=false": [
+     {
+      "model": "minecraft:block/grass_block"
+     },
+     {
+      "model": "minecraft:block/grass_block",
+      "y": 90
+     },
+     {
+      "model": "minecraft:block/grass_block",
+      "y": 180
+     },
+     {
+      "model": "minecraft:block/grass_block",
+      "y": 270
+     }
+    ],
+    "snowy=true": {
+     "model": "minecraft:block/grass_block_snow"
+    }
+   }
+  },
+  "oak_log": {
+   "variants": {
+    "axis=x": {
+     "model": "minecraft:block/oak_log_horizontal",
+     "x": 90,
+     "y": 90
+    },
+    "axis=y": {
+     "model": "minecraft:block/oak_log"
+    },
+    "axis=z": {
+     "model": "minecraft:block/oak_log_horizontal",
+     "x": 90
+    }
+   }
+  },
+  "oak_planks": {
+   "variants": {
+    "": {
+     "model": "minecraft:block/oak_planks"
+    }
+   }
+  },
+  "stone": {
+   "variants": {
+    "": [
+     {
+      "model": "minecraft:block/stone"
+     },
+     {
+      "model": "minecraft:block/stone_mirrored"
+     },
+     {
+      "model": "minecraft:block/stone",
+      "y": 180
+     },
+     {
+      "model": "minecraft:block/stone_mirrored",
+      "y": 180
+     }
+    ]
+   }
+  },
+  "dirt": {
+   "variants": {
+    "": [
+     {
+      "model": "minecraft:block/dirt"
+     },
+     {
+      "model": "minecraft:block/dirt",
+      "y": 90
+     },
+     {
+      "model": "minecraft:block/dirt",
+      "y": 180
+     },
+     {
+      "model": "minecraft:block/dirt",
+      "y": 270
+     }
+    ]
+   }
+  },
+  "cobblestone": {
+   "variants": {
+    "": {
+     "model": "minecraft:block/cobblestone"
+    }
+   }
+  },
+  "glass": {
+   "variants": {
+    "": {
+     "model": "minecraft:block/glass"
+    }
+   }
+  },
+  "oak_leaves": {
+   "variants": {
+    "persistent=false": {
+     "model": "minecraft:block/leaves/oak/not_persistent"
+    },
+    "distance=1,persistent=true": {
+     "model": "minecraft:block/leaves/oak/1"
+    },
+    "distance=2,persistent=true": {
+     "model": "minecraft:block/leaves/oak/2"
+    },
+    "distance=3,persistent=true": {
+     "model": "minecraft:block/leaves/oak/3"
+    },
+    "distance=4,persistent=true": {
+     "model": "minecraft:block/leaves/oak/4"
+    },
+    "distance=5,persistent=true": {
+     "model": "minecraft:block/leaves/oak/5"
+    },
+    "distance=6,persistent=true": {
+     "model": "minecraft:block/leaves/oak/6"
+    },
+    "distance=7,persistent=true": {
+     "model": "minecraft:block/leaves/oak/7"
+    }
+   }
+  },
+  "white_stained_glass": {
+   "variants": {
+    "": {
+     "model": "minecraft:block/white_stained_glass"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1 @@
+export { WebGPUDevice } from "./WebGPUDevice";

@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "what": "Phase-P RenderStats baseline (RENDERER_OPTIMIZATION_PLAN.md §Phase P). The numbers every later phase's ✅ DONE WHEN is measured AGAINST. Re-record with `npm run harness:webgpu:verify -- simstorm` (the BASELINE_JSON console line) after a deliberate change; an UNEXPECTED move is the signal.",
+    "recorded": "2026-06-20",
+    "phase": "Phases 0-5 + P2 INDEX-ARENA follow-up. liveBuffers 28→17: the per-section translucent INDEX buffers are now sub-allocations in ONE shared index BufferArena (the §11 vertex-arena pattern extended to indices) — ~12 per-section index buffers collapsed to 1. A re-sort updates the index allocation IN PLACE (U6); the BufferArena now has O(1) rangeOf (byId map — kills the O(sections²) collectDraws), best-fit allocation, and shrink-on-compact reclaim (U8, commit-gated). Geometry pixel-identical (DYNAMIC glass re-sorts correctly through the arena byte-offset; stress holes 0.00%). Off-thread meshing live (frameMs ~0.28, all four per-frame alloc metrics 0).",
+    "device": "Apple/Metal via Chrome (real GPU); deviceScaleFactor 2",
+    "command": "npm run harness:webgpu:verify -- simstorm",
+    "units": "ms for *Ms; counts otherwise. drawCalls/passes/alloc*/jobs* are PER-FRAME deltas; liveBuffers is an absolute gauge; resorts is cumulative. Each metric is {avg, p95, max} across the run's sampled frames.",
+    "notes": "sectionsCulled = 0 because the 41-section world is fully in-frustum at the harness camera (culling is exercised separately by harness/stress at 768 sections). RESULTS: allocRawVertex 80447→0 (#1 single-pass inline encode), allocDrawList 41→0 (OCC-2-l1 scratch reuse), allocFrustum 2→0 (F4 reused flat-scalar frustum), allocEntityEmit 8→0 (F8/ENT-4 EntityScene pool + ENT-5 BE-origin cache); frameMs avg 0.41→0.28→0.3, encodeMs 0.07→0.03 (F7 per-draw guards). jobsMeshed≈jobsDirtied (N1 coalescing via the new Scheduler/TaskQueue) and jobsDiscarded=0 (no stale builds). Phase 2: liveBuffers 57→27 — the O(sections×passes) per-section vertex buffers are now sub-allocations in 3 shared per-pass vertex BufferArenas (committed sections carry a stable AllocationId; collectDraws resolves arena buffer+byte-offset at draw time, so arena grow/compaction is invisible to `presented`). Translucent INDEX buffers stay per-section (the remaining count) — arena-ing them is the deferred follow-up. REMAINING targets: drawCalls (Phase 4 batched draw); sectionsCulled (Phase 3 occlusion). Meshing runs via scheduler.tick BEFORE the frame timer, so frameMs stays render-encode-only and comparable."
+  },
+  "scenario": "redstone-clock + explosion + piston · 64x24x64 world · 9 pistons",
+  "ticks": 120,
+  "samples": 120,
+  "sectionsTotal": 41,
+  "frameMs": { "avg": 0.24, "p95": 0.4, "max": 1.4 },
+  "cullMs": { "avg": 0.03, "p95": 0.1, "max": 0.1 },
+  "encodeMs": { "avg": 0.04, "p95": 0.1, "max": 0.1 },
+  "resortMs": { "avg": 0, "p95": 0, "max": 0.1 },
+  "entityMs": { "avg": 0.07, "p95": 0.2, "max": 0.9 },
+  "drawCalls": { "avg": 43.45, "p95": 44, "max": 44 },
+  "passes": { "avg": 3.67, "p95": 4, "max": 4 },
+  "liveBuffers": { "avg": 16.02, "p95": 17, "max": 17 },
+  "sectionsDrawn": { "avg": 40.77, "p95": 41, "max": 41 },
+  "sectionsCulled": { "avg": 0, "p95": 0, "max": 0 },
+  "resorts": { "avg": 12, "p95": 12, "max": 12 },
+  "allocRawVertex": { "avg": 0, "p95": 0, "max": 0 },
+  "allocDrawList": { "avg": 0, "p95": 0, "max": 0 },
+  "allocFrustum": { "avg": 0, "p95": 0, "max": 0 },
+  "allocEntityEmit": { "avg": 0, "p95": 0, "max": 0 },
+  "jobsDirtied": { "avg": 16.04, "p95": 16, "max": 18 },
+  "jobsMeshed": { "avg": 16, "p95": 16, "max": 16 },
+  "jobsDiscarded": { "avg": 0, "p95": 0, "max": 0 }
+}
